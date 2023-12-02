@@ -76,7 +76,7 @@ function get_ttdh($n){
             $tt="Đã giao";
             break;  
             case '5':
-                $tt=" hủy";
+                $tt="Đã hủy";
                 break;          
         default:
             $tt="Chờ kiểm tra";
