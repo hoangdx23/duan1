@@ -18,7 +18,7 @@
   <input name="giasp" type="text" class="form-control" placeholder="Price" aria-label="Username" aria-describedby="addon-wrapping">
   </div>
   <div class="mb-3">
-  <input name="luotxem" type="number" class="form-control" placeholder="Quatity" aria-label="Username" aria-describedby="addon-wrapping">
+  <input name="soluong" type="number" class="form-control" placeholder="Amount" aria-label="Username" aria-describedby="addon-wrapping">
   </div>
   <div class="mb-3">
   <input name="hinh" type="file" class="form-control" placeholder="Image" aria-label="Username" aria-describedby="addon-wrapping">

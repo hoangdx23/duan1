@@ -19,7 +19,7 @@
   <input value="<?=$price?>" name="giasp" type="text" class="form-control" placeholder="Price" aria-label="Username" aria-describedby="addon-wrapping">
   </div>
   <div class="mb-3">
-  <input value="<?=$luotxem?>" name="luotxem" type="text" class="form-control" placeholder="Quatity" aria-label="Username" aria-describedby="addon-wrapping">
+  <input value="<?=$soluong?>" name="soluong" type="number" class="form-control" placeholder="Amount" aria-label="Username" aria-describedby="addon-wrapping">
   </div>
   <div class="mb-3">
   <input value="<?=$img?>" name="hinh" type="file" class="form-control" placeholder="Image" aria-label="Username" aria-describedby="addon-wrapping">
@@ -27,7 +27,7 @@
 </div>
   <div class="mb-3">
   <div class="form-floating">
-  <textarea value="<?=$mota?>" name="mota" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <textarea value="Comments" name="mota" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"><?=$mota?></textarea>
   <label for="floatingTextarea2">  <?=$mota?>
 </label>
 </div>  </div>

@@ -113,7 +113,7 @@ if(isset( $_GET['act'])){
                             update_danhmuc($id,$tenloai);
                             $thongbao=" Cập Nhật Thành Công";
                         }
-                        $listdm= loadall_danhmuc("",0);
+                        $listdm= loadall_danhmuc();
                         //  var_dump($listdm);
                         // die;
                             include "danhmuc/list.php";
@@ -126,14 +126,15 @@ if(isset( $_GET['act'])){
                                 $giasp = isset($_POST['giasp']) ? $_POST['giasp'] : '';
                                 $luotxem = isset($_POST['luotxem']) ? $_POST['luotxem'] : '';
                                 $mota = isset($_POST['mota']) ? $_POST['mota'] : '';
+                                $soluong = isset($_POST['soluong']) ? $_POST['soluong'] : '';
                                 $hinh = isset($_FILES['hinh']['name']) ? $_FILES['hinh']['name'] : '';
-                                $error_message = validate_sanpham($iddm, $tensp, $giasp, $mota, $hinh,$luotxem);
+                                $error_message = validate_sanpham($iddm, $tensp, $giasp, $mota, $hinh,$soluong);
                                 if ($error_message === null) {
                                     $target_dir = "../upload/";
                                     $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
                     
                                     if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
-                                        insert_sanpham($tensp, $giasp,$luotxem,$hinh, $mota, $iddm);
+                                        insert_sanpham($tensp, $giasp,$hinh, $mota, $iddm,$soluong);
                                         $thongbao = 'Nhập Thành Công';
                                     } else {
                                         $thongbao = 'Có lỗi khi tải lên hình ảnh.';
@@ -145,7 +146,6 @@ if(isset( $_GET['act'])){
                             $listdm = loadall_danhmuc();
                             include "sanpham/add.php";
                             break;
-                                break;
                                 case 'listsp':
                                     if(isset($_POST['listok'])&&($_POST['listok'])){
                                         $kyw=$_POST['kyw'];
@@ -182,7 +182,7 @@ if(isset( $_GET['act'])){
                                                 $tensp=$_POST['tensp'];
                                                 $giasp=$_POST['giasp'];
                                                 $mota=$_POST['mota'];
-                                                $luotxem=$_POST['luotxem'];
+                                                $soluong=$_POST['soluong'];
                                                 $hinh=$_FILES['hinh']['name'];
                                                 $target_dir = "../upload/";
                                                 $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
@@ -192,7 +192,7 @@ if(isset( $_GET['act'])){
                                                     // echo "Sorry, there was an error uploading your file.";
                                                     
                                                   }
-                                              update_sanpham($id,$tensp,$giasp,$luotxem,$hinh,$mota);
+                                              update_sanpham($id,$tensp,$giasp,$hinh,$mota,$soluong);
                                                  $thongbao=" Cập Nhật Thành Công";
                                             }
                                             $listdm= loadall_danhmuc();

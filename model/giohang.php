@@ -48,7 +48,7 @@ function loadall_bill($kyw="",$iduser=0){
     $sql="select * from donhang where 1";
     if ($iduser>0) $sql.=" AND iduser=".$iduser;
     if ($kyw!="") $sql.=" AND id like'%".$kyw."%'";
-    $sql.=" order by id desc";
+    $sql.=" order by id desc limit 01,10";
     $listbill=pdo_query($sql);
     return $listbill ;
 }
@@ -86,7 +86,7 @@ function get_ttdh($n){
 }
 
 function loadall_mybill($iduser){
-    $sql="select * from donhang where iduser=".$iduser." order by id desc";
+    $sql="select * from donhang where iduser=".$iduser." order by id desc limit 01,10";
     $mybill=pdo_query($sql);
     return $mybill ;
 }
@@ -111,7 +111,7 @@ function get_pttt($n){
     return $tt;
 }
 function cancel_donhang($id){
-    $sql="update donhang set bill_status = 5 where id=".$id;
+    $sql="update donhang set bill_status =5 where id=".$id;
     pdo_execute($sql);
 }
 
