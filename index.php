@@ -312,12 +312,12 @@ if ((isset($_GET['act']))&&($_GET['act'])) {
                                 include "view/hoadon.php";
                                 break;
                             case 'huydh':
-                                if(isset($_GET['id'])&&($_GET['id'])){
-                                    $id=$_GET['id'];
+                                if(isset($_POST['huy'])&&($_POST['id'])){
+                                    $id=$_POST['id'];
                                     cancel_donhang($id);
                                     $thongbao=" Hủy Thành Công";
                                 }
-                                include "view/hoadon.php";
+                                header("location: index.php?act=chitietdh&id=".$_POST['id']);
                                 break;
                             
         default:

@@ -64,8 +64,8 @@
     <th></th>
     <td>
     <?php if($bill_status==1 or $bill_status==2 ){?>
-  <form action="index.php?act=huydh" method="get">
-  <input type="hidden" name="id" value="<?php if(isset($id)&&($id>0)) echo $id;?>">
+  <form action="index.php?act=huydh" method="POST">
+  <input type="hidden" name="id" value="<?php echo $id;?>">
     <input type="submit" name="huy" value="Hủy đơn hàng" class="btn-theme">
   </form>
   <?php  } ?>
