@@ -93,7 +93,7 @@
   <div class="menu-container">
     <ul class="menu">
     
-     <a href="index.php"> <img class="img"  src="https://theme.hstatic.net/1000306633/1000891824/14/logo.png?v=587" alt="" witdh="200px "/> </a>
+     <a href="index.php"> <img class="img"  src="img/logo.jpg" alt="" witdh="600px "/> </a>
         <?php                         
                           foreach ($dm as $dm) {
                             extract($dm);

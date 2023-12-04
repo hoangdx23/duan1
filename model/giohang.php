@@ -48,7 +48,7 @@ function loadall_bill($kyw="",$iduser=0){
     $sql="select * from donhang where 1";
     if ($iduser>0) $sql.=" AND iduser=".$iduser;
     if ($kyw!="") $sql.=" AND id like'%".$kyw."%'";
-    $sql.=" order by id desc limit 01,10";
+    $sql.=" order by id desc";
     $listbill=pdo_query($sql);
     return $listbill ;
 }
@@ -86,7 +86,7 @@ function get_ttdh($n){
 }
 
 function loadall_mybill($iduser){
-    $sql="select * from donhang where iduser=".$iduser." order by id desc limit 01,10";
+    $sql="select * from donhang where iduser=".$iduser." order by id desc";
     $mybill=pdo_query($sql);
     return $mybill ;
 }
@@ -115,10 +115,5 @@ function cancel_donhang($id){
     pdo_execute($sql);
 }
 
-function loadall_thongke(){
-    $sql="select danhmuc.name, count(sanpham.id) as countsp, min(sanpham.price) as minprice, max(sanpham.price) as maxprice, avg(sanpham.price)";
-    $sql.="from sanpham left join danhmuc on danhmuc.id=sanpham.id order by danhmuc.id desc";
-    $listtk=pdo_query($sql);
-    return $listtk;
-}
+
 ?>

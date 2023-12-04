@@ -45,10 +45,10 @@
                   <div class="product-single-info">
                     <h3 class="main-title">'.$names.'</h3>
                     <div class="prices">
-                      <span class="price">'.$price.'</span>
+                      <span class="price">'.$price.' Vnđ</span>
                     </div>
                     <div class="prices">Số lượng:
-                    <span class="price">'.$luotxem.'</span>
+                    <span class="description">'.$soluong.'</span>
                   </div>
                     <p>'.$mota.'</p>
                     <div class="product-quick-action">

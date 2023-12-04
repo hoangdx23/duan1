@@ -4,6 +4,7 @@ include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
 include "../model/giohang.php";
+include "../model/thongke.php";
 include "header.php";
 //controller
 if(isset( $_GET['act'])){
@@ -243,6 +244,16 @@ if(isset( $_GET['act'])){
                                 $listbill=loadall_ktbill();
                                 include "donhang/listkt.php";
                                 break;
+                                case 'listthongke': 
+                                    $listthongke1=loadall_thongke_danhmuc();
+                                    
+                                    include "thongke/list.php";
+                                    break;
+                                    case 'bieudo': 
+                                        $listthongke1=loadall_thongke_danhmuc();
+                                        
+                                        include "thongke/bieudo.php";
+                                        break;
                 default:
                 include "home.php";
                 break;

@@ -13,7 +13,7 @@
    <div class="menu1">
    <div class="menu-item1">
            <a href="../index.php"> 
-       <img class="img" src="https://theme.hstatic.net/1000306633/1000891824/14/logo.png?v=587" alt="" width="200px"/>
+       <img class="img" src="../img/logo.png" alt="" width="200px"/>
        </a>
        </div>
        <div class="menu-item1">
@@ -33,6 +33,9 @@
        </div>
        <div class="menu-item1">
            <a href="index.php?act=listbill">ĐƠN HÀNG</a>
+       </div>
+       <div class="menu-item1">
+           <a href="index.php?act=listthongke">THỐNG KÊ</a>
        </div>
    </div>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">

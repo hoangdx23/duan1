@@ -13,7 +13,7 @@
        <div class="title" ><h2 style="text-align: center;"> QUẢN LÍ SẢN PHẨM</h2></div>
   <div class="mb-3">
  
-  <input  value="<?=$names?>" name="tensp" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+  <input  value="<?=$names?>" name="tensp" type="text" class="form-control" placeholder="Product name" aria-label="Username" aria-describedby="addon-wrapping">
   </div>
   <div class="mb-3">
   <input value="<?=$price?>" name="giasp" type="text" class="form-control" placeholder="Price" aria-label="Username" aria-describedby="addon-wrapping">
@@ -28,7 +28,7 @@
   <div class="mb-3">
   <div class="form-floating">
   <textarea value="Comments" name="mota" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"><?=$mota?></textarea>
-  <label for="floatingTextarea2">  <?=$mota?>
+  <label for="floatingTextarea2">  Comments
 </label>
 </div>  </div>
 <input type="hidden"name="id" value="<?=$id?>">
