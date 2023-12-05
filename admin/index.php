@@ -240,6 +240,12 @@ if(isset( $_GET['act'])){
                             $listbill= loadall_bill("",0);
                             include "donhang/list.php";
                             break;
+                            case 'ctdh':
+                                if(isset($_GET['id'])&& ($_GET['id']>0)){
+                                  $listdh=loadone_bill($_GET['id']);
+                                }
+                                include "donhang/detail.php";
+                            break;
                             case 'listkt': 
                                 $listbill=loadall_ktbill();
                                 include "donhang/listkt.php";

@@ -29,6 +29,7 @@
                             $ttdh=get_ttdh($bill["bill_status"]);
                             $suadh= "index.php?act=suadh&id=".$id;
                             $xoadh= "index.php?act=xoadh&id=".$id;
+                            $ctdh= "index.php?act=ctdh&id=".$id;
                             echo  '<tr>
                             <td>H2T-'.$bill['id'].'</td>
                             <td>'.$kh.' </td>
@@ -36,9 +37,16 @@
                             <td>'.$bill['total'].' </td>
                             <td>'.$ttdh.' </td>
                             <td> 
-                            <a href="'.$xoadh.'"><button type="button" class="btn btn-danger">Delete</button></a>
+                            <a href="'.$xoadh.'"><button type="button" class="btn btn-danger">Delete</button></a>';
+                            if($bill_status!=4 && $bill_status!=5){
+                            echo '
                             <a href="'.$suadh.'"><button type="button" class="btn btn-success">Edit</button></a></td>
                         </tr>';
+                            }else{
+                              echo '
+                            <a href="'.$ctdh.'"><button type="button" class="btn btn-success">Detail</button></a></td>
+                        </tr>';
+                            }
                         }   
                     ?>
             </tbody>

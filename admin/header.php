@@ -17,9 +17,6 @@
        </a>
        </div>
        <div class="menu-item1">
-           <a href="index.php?act=listdm">AMIN</a>
-       </div>
-       <div class="menu-item1">
            <a href="index.php?act=listdm">DANH MỤC</a>
        </div>
        <div class="menu-item1">
