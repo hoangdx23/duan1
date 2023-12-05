@@ -12,17 +12,6 @@
               <input name="kyw" type="search" class="form-control" placeholder="Search...">
             </div>
             <div class="col-md-4 custom-margin">
-              <select name="iddm" class="form-select" aria-label="Default select example">
-                <option value="0" selected>Open this select menu</option>
-                <?php
-                    foreach ($listdm as $danhmuc) {
-                        extract($danhmuc);
-                        echo'<option value="'.$id.'">'.$name.'</option>';
-                    }
-                    ?>    
-              </select>
-            </div>
-            <div class="col-md-4 custom-margin">
               <input type="submit" name="listok" value="Search" class="btn btn-primary">
             </div>
           </div>
