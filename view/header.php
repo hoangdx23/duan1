@@ -106,6 +106,12 @@
         if (isset($_SESSION['user'])) {
           extract($_SESSION['user']);
           ?>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         <li><a href="">Xin chào <?=$user?></a></li>
         <li class="submenu">
                 <a href="#">thông tin</a>
@@ -117,7 +123,7 @@
                 <li><a href="index.php?act=thoat">THOÁT</a></li>
                 </ul>
             </li>
-            <li></li>
+            
         <?php 
         if ($role==1) {
         ?>
@@ -130,7 +136,7 @@
       <li><a href="index.php?act=dangky">ĐĂNG KÍ</a></li>
       <li><a href="index.php?act=giohang">GIỎ HÀNG </a></li>
       <li><a href="index.php?act=mybill">HÓA ĐƠN </a></li>
-      <li><input type="text" value="timkiem"></li>
+      
       <?php }?>
     </div>
     </ul>

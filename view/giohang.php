@@ -47,7 +47,7 @@
                                                 <img src="./upload/<?php echo $item['img']; ?>" width="90" height="110" alt="Image-HasTech">
                                             </a>
                                         </td>
-                                        <td class="product-name"><a href="single-product.html"><?php echo $item['names']; ?></a></h4>
+                                        <td class="product-name"><a href="index.php?act=spct&idsp=<?php echo $item['id']; ?>"><?php echo $item['names']; ?></a></h4>
                                         </td>
                                             <h4 class="title">
                                         <td class="product-price">

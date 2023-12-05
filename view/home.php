@@ -18,17 +18,6 @@
               <input name="kyw" type="search" class="form-control" placeholder="Search...">
             </div>
             <div class="col-md-4 custom-margin">
-              <select name="iddm" class="form-select" aria-label="Default select example">
-                <option value="0" selected>Open this select menu</option>
-                <?php
-                    foreach ($listdm as $danhmuc) {
-                        extract($danhmuc);
-                        echo'<option value="'.$id.'">'.$name.'</option>';
-                    }
-                    ?>    
-              </select>
-            </div>
-            <div class="col-md-4 custom-margin">
               <input type="submit" name="listok" value="Search" class="btn btn-primary">
             </div>
           </div>
@@ -56,7 +45,7 @@ echo'   <div class="card">
 <div class="contentBx">
 </div>
 <div class="button">
-<a class="button-link secondary-button" href="index.php?act=themgiohang&&id='.$id.'">View</a>
+<a class="button-link secondary-button" href="'.$linksp.'">View</a>
     <a class="button-link secondary-button" href="index.php?act=themgiohang&&id='.$id.'">Thêm vào giỏ</a>
 
 </div>
