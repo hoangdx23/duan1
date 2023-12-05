@@ -1,6 +1,8 @@
 </div>
 </div>
-  <img src="img/banner.png" alt="" />
+  <div class="typewriter">
+  <h1 id="text">Sản phẩm</h1>
+  </div><br>
   <div class="typewriter">
   <h1 id="text">Sản phẩm</h1>
   </div>
