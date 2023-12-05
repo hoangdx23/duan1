@@ -23,6 +23,15 @@ if ((isset($_GET['act']))&&($_GET['act'])) {
                 include "view/home.php";
             }
             break;
+            case 'sanpham':
+                if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
+                    $iddm=$_GET['iddm'];
+                $dssp=loadall_sanpham("",$iddm);
+                include "view/sanpham.php";
+                }else {
+                    include "view/home.php";
+                }
+                break;
         case 'gt':
             include "view/gt.php";
             break;
