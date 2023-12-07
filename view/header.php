@@ -67,11 +67,16 @@
 .menu li:hover {
     background-color: #555;
 } */
-
+.text a{
+    text-decoration: none;
+}
 .submenu {
     position: relative;
 }
 
+.text a :hover{
+    color: white;
+}
 .submenu ul {
     display: none;
     position: absolute;
@@ -90,6 +95,7 @@
 }
 
   </style>
+  <div class="text">
   <div class="menu-container">
     <ul class="menu">
     

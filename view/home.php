@@ -10,7 +10,8 @@
   <div class="typewriter">
   <h1 id="text">STREETWEAR BRAND LIMITED</h1>
   </div>
-  <form action="index.php?act=sanpham" method="post">
+  <form action="index.php?act=sanpham" method="post" style="margin-left: 540px;
+    margin-bottom: 30px;">
         <div class="container mt-4">
           <div class="row">
             <div class="col-md-4 custom-margin">
@@ -36,7 +37,7 @@ if (isset($img_path)) {
 //     <p>'.$price.'</p>
 //     <a href="'.$linksp.'">'.$names.'</a>
 // </div>';
-echo'   <div class="card">
+echo'   <div class="card" style="border:none;">
 <div class="imgBx ">
 <a href="'.$linksp.'"><img src="'.$hinh.'" name="img" alt="nike-air-shoe" width="400px"/></a>
     

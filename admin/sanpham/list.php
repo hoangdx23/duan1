@@ -40,7 +40,6 @@
                 <th scope="col">Name</th>
                 <th scope="col">Gía</th>
                 <th scope="col">Hình</th>
-                <th scope="col">Lượt xem</th>
                 <th scope="col">Số lượng</th>
                 <th scope="col">Hành động</th>
               </tr>
@@ -63,7 +62,6 @@
                             <td>'.$price.' </td>
                             <td>'.$img.' </td>
                             <td>'.$luotxem.' </td>
-                            <td>'.$soluong.' </td>
                             <td> 
                             <a href="'.$xoasp.'"><button type="button" class="btn btn-danger">Delete</button></a>
                             <a href="'.$suasp.'"><button type="button" class="btn btn-success">Edit</button></a></td>
