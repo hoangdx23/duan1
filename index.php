@@ -335,6 +335,14 @@ if ((isset($_GET['act']))&&($_GET['act'])) {
                                 }
                                 header("location: index.php?act=chitietdh&id=".$_POST['id']);
                                 break;
+                                case 'xacnhandh':
+                                    if(isset($_POST['xacnhan'])&&($_POST['id'])){
+                                        $id=$_POST['id'];
+                                        confirm_donhang($id);
+                                        $thongbao=" Hủy Thành Công";
+                                    }
+                                    header("location: index.php?act=chitietdh&id=".$_POST['id']);
+                                    break;
                             
         default:
 

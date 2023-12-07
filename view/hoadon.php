@@ -68,6 +68,12 @@
   <input type="hidden" name="id" value="<?php echo $id;?>">
     <input type="submit" name="huy" value="Hủy đơn hàng" class="btn-theme">
   </form>
+  <?php  } else if($bill_status==3){ ?>
+
+  <form action="index.php?act=xacnhandh" method="POST">
+  <input type="hidden" name="id" value="<?php echo $id;?>">
+    <input type="submit" name="xacnhan" value="Xác nhận nhận hàng" class="btn-theme">
+  </form>
   <?php  } ?>
 
     </td>

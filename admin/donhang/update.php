@@ -59,8 +59,6 @@
   <option value="0">Đơn hàng không hợp lệ</option>
   <option value="2">Chờ xử lí</option>
   <option value="3">Đang giao</option>
-  <option value="4">Đã giao hàng</option>
-  <option value="5">Đã Hủy</option>
 </select>
   </div>
 <?php } ?>
