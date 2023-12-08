@@ -52,7 +52,7 @@ $sql = "SELECT * FROM danhmuc LIMIT $viTriBatDau, $soDanhMucTrenTrang";
 </table>
 
 <!-- Hiển thị các liên kết phân trang -->
-<div><nav aria-label="Page navigation example" style="margin-left:450px">
+<div class="textcolor"><nav aria-label="Page navigation example" style="margin-left:450px">
   <ul class="pagination">
   <li class="page-item"><a class="page-link" href="index.php?act=listdm&trang=<?php echo $trangHienTai-1;?>">Previous</a></li>    <?php
     for ($i = 1; $i <= ceil(count($listdm) / $soDanhMucTrenTrang); $i++) {

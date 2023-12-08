@@ -1,4 +1,33 @@
+
+<?php
+// Số danh mục hiển thị trên mỗi trang
+$soDanhMucTrenTrang = 4;
+
+// Xác định trang hiện tại
+$trangHienTai = isset($_GET['trang']) ? $_GET['trang'] : 1;
+
+// Tính vị trí bắt đầu lấy dữ liệu
+$viTriBatDau = ($trangHienTai - 1) * $soDanhMucTrenTrang;
+
+// Lấy danh sách danh mục từ vị trí bắt đầu
+$danhSachDanhMuc = array_slice($spnew, $viTriBatDau, $soDanhMucTrenTrang);
+// Sửa câu truy vấn SQL trong phần lấy danh sách danh mục
+$sql = "SELECT * FROM danhmuc LIMIT $viTriBatDau, $soDanhMucTrenTrang";
+
+// Thực hiện truy vấn và lấy dữ liệu
+// ...
+
+?>
 </div>
+<style>
+.textcolor a{
+  color: black;
+}
+.textcolor li :hover{
+  color: white;
+  background:black;
+}
+</style>
 </div>
   <img src="img/banner.png" alt="" />
   <div class="banner" >
@@ -27,7 +56,7 @@
 <div class="nd">
              <?php
     $i=0;
-    foreach ($spnew as $sp) {
+    foreach ($danhSachDanhMuc as $sp) {
      extract($sp);
 if (isset($img_path)) {
     $hinh= $img_path.$img;
@@ -63,12 +92,14 @@ echo'   <div class="card" style="border:none;">
    
     }
     ?>
-                <!-- </div>
-            </div>
-            <div class="boxphai ">
-          <?php
-          include "boxrigth.php"
-          ?>
-            </div>
-        </div> -->
-        </div>
+    <div class="textcolor"><nav aria-label="Page navigation example" style="margin-left:450px;position: relative;
+    right: 220px;">
+  <ul class="pagination">
+  <li class="page-item"><a class="page-link" href="index.php?act=sp$spnew&trang=<?php echo $trangHienTai-1;?>">Previous</a></li>    <?php
+    for ($i = 1; $i <= ceil(count($spnew) / $soDanhMucTrenTrang); $i++) {
+      echo '
+      <li class="page-item"><a class="page-link" href="index.php?act=sp$spnew&trang=' . $i . '">' . $i . '</a></li>';
+    }
+    ?>
+<li class="page-item"><a class="page-link" href="index.php?act=sp$spnew&trang=<?php echo $trangHienTai + 1; ?>">Next</a></li>
+</nav>  </div>
