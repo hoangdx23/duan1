@@ -1,7 +1,7 @@
 
 <?php
 // Số danh mục hiển thị trên mỗi trang
-$soDanhMucTrenTrang = 4;
+$soDanhMucTrenTrang = 8;
 
 // Xác định trang hiện tại
 $trangHienTai = isset($_GET['trang']) ? $_GET['trang'] : 1;

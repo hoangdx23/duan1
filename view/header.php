@@ -93,8 +93,10 @@
 }
 .product-name a{ 
  color: black;
- 
+
 }
+
+
   </style>
   <div class="text">
   <div class="menu-container">
@@ -122,7 +124,7 @@
         <li><a href="">Xin chào <?=$user?></a></li>
         <li class="submenu">
                 <a href="#">thông tin</a>
-                <ul>
+                <ul style="width:150px">
                 <li><a href="index.php?act=mybill">HÓA ĐƠN </a></li>
                 <li><a href="index.php?act=edittk">TÀI KHOẢN </a></li>
                 <li><a href="index.php?act=giohang">GIỎ HÀNG </a></li>
@@ -143,7 +145,6 @@
       <li><a href="index.php?act=dangky">ĐĂNG KÍ</a></li>
       <li><a href="index.php?act=giohang">GIỎ HÀNG </a></li>
       <li><a href="index.php?act=mybill">HÓA ĐƠN </a></li>
-      
       <?php }?>
     </div>
     </ul>

@@ -83,13 +83,16 @@ if ((isset($_GET['act']))&&($_GET['act'])) {
                 } else {
                     // Thực hiện đăng nhập
                     $checkuser = checkuser($email, $pass);
-                    if (is_array($checkuser)) {
+                    if ($checkuser['is_locked']) {
+                        $thongbao="Tài khoản đã bị khóa";
+                    }
+                    elseif (is_array($checkuser)) {
                         $_SESSION['user'] = $checkuser;
                         $thongbao = "Đăng nhập thành công";
                         header("Location: index.php");
                         exit();
                     } else {
-                        $thongbao = "Đăng nhập thất bại";
+                        $thongbao = "Sai mật khẩu hoặc email";
                     }
                 }
             }
