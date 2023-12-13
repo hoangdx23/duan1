@@ -88,8 +88,15 @@
 .submenu ul li {
     display: block;
 }
-
+.text a {
+    text-decoration: none;
+}
+.product-name a{ 
+ color: black;
+ 
+}
   </style>
+  <div class="text">
   <div class="menu-container">
     <ul class="menu">
     
